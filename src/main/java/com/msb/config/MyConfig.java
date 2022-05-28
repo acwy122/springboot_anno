@@ -3,6 +3,7 @@ package com.msb.config;
 import com.msb.pojo.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 @Configuration(proxyBeanMethods = true)
 /**
@@ -10,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
  *
  * proxyBeanMethods = true  full模式  通过代理对象，依赖spring容器控制bean单例
  */
+@Import(User.class)
 public class MyConfig {
 
     /*<bean id="" name="" class="com.msb.pojo.User"></bean>*/
